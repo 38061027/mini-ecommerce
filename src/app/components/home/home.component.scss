@@ -1,0 +1,35 @@
+
+.container{
+    height: 100vh;
+}
+
+.nav-content{
+    border: 1px solid red;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title{
+    width: 40%;
+
+}
+
+.nav{
+    margin-right: 10px;
+    width: 50%;
+}
+
+.items{
+    display: flex;
+    gap: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+   
+}
+li{
+    list-style: none;
+}

@@ -1,0 +1,22 @@
+.content-footer{
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+a{
+    text-decoration: none;
+}
