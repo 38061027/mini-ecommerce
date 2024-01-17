@@ -1,6 +1,7 @@
 
 .container{
     height: 100vh;
+  
 }
 
 .nav-content{
@@ -17,6 +18,47 @@
 
 }
 
+.items #item{
+    cursor: pointer;
+}
+
+.items #item:hover{
+    color: purple;
+    transition: 0.5s;
+}
+.favorite-shop{
+    width: 80px;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.counter-fav{
+    position: absolute;
+    font-size: small;
+    right: -50%;
+    top: -50%;
+   
+    
+}
+.counter-shop{
+    position: absolute;
+    font-size: small;
+    right: -50%;
+    top: -50%;
+}
+
+#item-favotite{
+    color: red;
+    position: relative;
+}
+#item-shop{
+    color: blue;
+    position: relative;
+
+}
+
 .nav{
     margin-right: 10px;
     width: 50%;
@@ -26,10 +68,48 @@
     display: flex;
     gap: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: large;
    
 }
 li{
     list-style: none;
+}
+
+.footer{
+    width: 100%;
+}
+
+.products-content{
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product{
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-product{
+    width: 150px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn-content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
 }
