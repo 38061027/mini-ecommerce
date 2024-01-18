@@ -10,18 +10,34 @@ import { ProductsService } from 'src/app/services/products.service';
 export class HomeComponent implements OnInit{
 
   products!:any[]
+  cartCounter:number = 0
 
   constructor(private service: ProductsService){}
 
+  
+  ngOnInit(): void {
+    this.getProducts()
+    this.updateCartCounter()
+  }
+  
   getProducts(){
     this.service.getProducts().subscribe(
       res => this.products = res
+      
     )
+
   }
 
-  ngOnInit(): void {
-    this.getProducts()
+  sendCart(product:any){
+    this.service.sendCart(product).subscribe(()=>{
+      this.updateCartCounter()
+    })
   }
-  
+
+  updateCartCounter() {
+    this.service.getCart().subscribe(res => {
+      this.cartCounter = res.length;
+    });
+  }
 
 }
