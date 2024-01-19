@@ -9,8 +9,11 @@
                 <li id="item">Quem somos</li>
                 <div class="favorite-shop">
 
-                    <li class="material-symbols-outlined" id="item-favotite">favorite <p class="counter-fav">2</p> </li>
-                    <li class="material-symbols-outlined" id="item-shop">shopping_cart  <p class="counter-shop">{{cartCounter}}</p></li>
+                    <li class="material-symbols-outlined" id="item-favotite">favorite <p class="counter-fav">2</p>
+                    </li>
+                    <li class="material-symbols-outlined" id="item-shop">shopping_cart <p class="counter-shop">
+                            {{cartCounter}}</p>
+                    </li>
 
                 </div>
 
@@ -25,10 +28,18 @@
             <a class="name-product" href="#">{{product.name}} - {{product.price}}</a>
             <div class="btn-content">
 
-            
+
                 <button class="buy" (click)="sendCart(product)">Adicionar ao carrinho</button>
 
             </div>
+        </div>
+
+
+        <div class="dialog" *ngIf="modal">
+            <i id="modal-check" class="material-symbols-outlined">
+                done
+            </i>
+            <h3> Você já adicionou o produto no carrinho!</h3>
         </div>
     </section>
 

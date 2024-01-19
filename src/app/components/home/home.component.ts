@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { resetFakeAsyncZone } from '@angular/core/testing';
+import { filter, tap } from 'rxjs';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit{
 
   products!:any[]
   cartCounter:number = 0
+  modal:boolean = false
 
   constructor(private service: ProductsService){}
 
@@ -28,11 +30,27 @@ export class HomeComponent implements OnInit{
 
   }
 
-  sendCart(product:any){
-    this.service.sendCart(product).subscribe(()=>{
-      this.updateCartCounter()
-    })
+  sendCart(product: any) {
+    this.service.getCart().subscribe((cart) => {
+    
+      const isProductInCart = cart.some((item:any) => item.id === product.id);
+
+     
+      if (!isProductInCart) {
+        this.service.sendCart(product).pipe(
+          tap(() => this.updateCartCounter())
+        ).subscribe();
+      }else{
+        this.modal = true;
+        setTimeout(() => {
+          this.modal = false
+        
+        }, 2500);
+        
+      }
+    });
   }
+
 
   updateCartCounter() {
     this.service.getCart().subscribe(res => {
