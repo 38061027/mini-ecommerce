@@ -1,0 +1,42 @@
+<main class="container-cart">
+
+<div class="content-product">
+    
+    
+        <div class="product-cart" *ngFor="let product of cart">
+            <img class="img"
+                [src]="product.photo"
+                alt="">
+            <div class="box-one">
+                <h3>{{product.name}}</h3>
+                <button>remover</button>
+            </div>
+    
+            <div class="box-btn">
+                <button class="btn">-</button>
+                <p class="qtd">2</p>
+                <button class="btn">+</button>
+            </div>
+    
+            <h2 class="price">{{product.price}} $</h2>
+    
+        </div>
+    
+</div>
+
+
+
+    <div class="details-cart">
+        <h2>Detalhes do carrinho</h2>
+    
+
+            <p class="qtd-pdt">Produtos (2)</p>
+         
+
+        <div class="total">
+            <h2>Total</h2>
+            <h2>30,56$</h2>
+        </div>
+    </div>
+
+</main>
