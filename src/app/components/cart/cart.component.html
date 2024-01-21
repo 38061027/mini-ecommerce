@@ -9,7 +9,7 @@
                 alt="">
             <div class="box-one">
                 <h3>{{product.name}}</h3>
-                <button>remover</button>
+                <button (click)="deleteProduct(product.id)">remover</button>
             </div>
     
             <div class="box-btn">
@@ -30,12 +30,12 @@
         <h2>Detalhes do carrinho</h2>
     
 
-            <p class="qtd-pdt">Produtos (2)</p>
+            <p class="qtd-pdt">Produtos {{productsCounter}}</p>
          
 
         <div class="total">
             <h2>Total</h2>
-            <h2>30,56$</h2>
+            <h2>{{total | currency}}</h2>
         </div>
     </div>
 

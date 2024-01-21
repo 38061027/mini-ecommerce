@@ -21,8 +21,16 @@ export class ProductsService {
     return this.http.post<any>(`${this.urlCart}`, product)
   }
   
+
+  // Cart component
+
+
   getCart():Observable<any>{
     return this.http.get<any>(this.urlCart)
+  }
+
+  deleteProduct(id: string) {
+    return this.http.delete(`${this.urlCart}/${id}`);
   }
 
 }

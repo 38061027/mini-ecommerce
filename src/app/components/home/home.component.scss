@@ -1,6 +1,7 @@
 .container {
     height: 100vh;
     position: relative;
+   
 }
 
 .nav-content {
@@ -125,6 +126,10 @@ a {
     font-size: 30px;
 }
 
+@keyframes animacaoDialof{
+    from{right: 0;}
+    to{right: 150px;}
+}
 
 .dialog {
     border-radius:10px ;
@@ -144,7 +149,9 @@ a {
     -moz-box-shadow: 18px 10px 53px -1px rgba(0,0,0,0.52);
     box-shadow: 18px 10px 53px -1px rgba(0,0,0,0.52);
 
- 
+    animation-name: animacaoDialof;
+    animation-duration: 3s;
+    
 }
 
 .dialog i{
