@@ -7,30 +7,45 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit{
+  cart: any[] = [];
+  total: number = 0;
+  productsCounter: number = 0;
 
-  cart!:any[]
-  total:number = 0
-  productsCounter:number = 0
-
-  constructor(private service: ProductsService){}
-
+  constructor(private service: ProductsService) {}
 
   ngOnInit(): void {
-    this.getCart()
+    this.getCart();
   }
 
-  getCart(){
+  getCart() {
     this.service.getCart().subscribe((res) => {
-      this.cart  = res
-      this.total = res.map((el:any) => Number(el.price)).reduce((a:number,b:number)=>a+b,0)
-      this.productsCounter = res.length
-    })
+      this.cart = res;
+      this.calculateTotal();
+    });
   }
-  deleteProduct(id:string){
-    return this.service.deleteProduct(id).subscribe(()=>{
-      this.getCart()
-      this.productsCounter-=1
-    })
+
+  deleteProduct(id: string) {
+    this.service.deleteProduct(id).subscribe(() => {
+      this.getCart();
+      this.productsCounter--;
+    });
+  }
+
+  increment(product: any) {
+    product.quantity = (product.quantity || 0) + 1;
+    this.calculateTotal();
+  }
+
+  decrement(product: any) {
+    if (product.quantity && product.quantity > 0) {
+      product.quantity--;
+      this.calculateTotal();
+    }
+  }
+
+  calculateTotal() {
+    this.total = this.cart.reduce((acc, curr) => acc + (curr.price * (curr.quantity || 0)), 0);
+    this.productsCounter = this.cart.reduce((acc, curr) => acc + (curr.quantity || 0), 0);
   }
 
 }

@@ -32,5 +32,8 @@ export class ProductsService {
   deleteProduct(id: string) {
     return this.http.delete(`${this.urlCart}/${id}`);
   }
+  
+
+
 
 }
