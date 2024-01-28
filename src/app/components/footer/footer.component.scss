@@ -1,15 +1,16 @@
 .content-footer{
-    border-top: 1px solid gray;
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 15px;
+    background-color: #333;
 }
 
 .title{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: white;
 }
 
 .contatos{
@@ -19,4 +20,5 @@
 }
 a{
     text-decoration: none;
+    color: white;
 }
