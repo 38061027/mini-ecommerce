@@ -8,7 +8,7 @@
                 <li id="item">Contato</li>
                 <li id="item">Quem somos</li>
                 <div class="favorite-shop">
-                    <li class="material-symbols-outlined" id="item-favotite">favorite <p class="counter-fav">2</p>
+                    <li class="material-symbols-outlined" routerLink="favorites" id="item-favotite">favorite<p class="counter-fav">{{favoriteCounter}}</p>
                     </li>
                     <li routerLink="cart" class="material-symbols-outlined" id="item-shop">shopping_cart <p
                             class="counter-shop">
@@ -23,7 +23,7 @@
 
     <section class="products-content">
         <div class="product" *ngFor="let product of products">
-            <button class="material-symbols-outlined" id="add-fav">favorite</button>
+            <button class="material-symbols-outlined" id="add-fav" (click)="sendFavorite(product)" #btnFavorite>favorite</button>
             <img class="img-product" [src]="product.photo" alt="">
             <h3 class="name-product" href="#">{{product.name}} - {{product.price}}</h3>
             <div class="btn-content">

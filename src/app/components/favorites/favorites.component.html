@@ -1,0 +1,14 @@
+<main class="container-favorites">
+
+    <div class="content" *ngFor="let favorite of favorites">
+        <img class="favorite-img" [src]="favorite.photo" alt="">
+
+        <div class="box">
+            <h3>{{favorite.name}}</h3>
+            <h3>{{favorite.price | currency}}</h3>
+            <button class="btn-remove" (click)="deleteFavorite(favorite.id)">Excluir</button>
+        </div>
+
+    </div>
+
+</main>
