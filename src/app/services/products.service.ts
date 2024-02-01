@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
+  removeFavorite(id: any) {
+    throw new Error('Method not implemented.');
+  }
 
  url:string = 'http://localhost:3000'
 

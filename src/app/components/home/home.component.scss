@@ -55,10 +55,16 @@
     top: -50%;
 }
 
-#item-favotite {
+#item-favorite {
     color: red;
     position: relative;
 }
+
+.favorite-active {
+    color: red; /* Defina a cor desejada aqui */
+  }
+  
+
 
 #item-shop {
     color: blue;
