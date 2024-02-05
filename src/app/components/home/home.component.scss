@@ -60,10 +60,7 @@
     position: relative;
 }
 
-.favorite-active {
-    color: red; /* Defina a cor desejada aqui */
-  }
-  
+
 
 
 #item-shop {
@@ -136,6 +133,7 @@ a {
     top: 10px;
     right: 10px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 @keyframes animacaoDialof {

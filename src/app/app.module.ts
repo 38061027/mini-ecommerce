@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HomeComponent,
     FooterComponent,
     CartComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

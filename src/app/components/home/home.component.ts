@@ -136,6 +136,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
         const isFavorite = this.favoriteIds.includes(productId);
         const color = isFavorite ? 'red' : 'black'; 
         this.renderer.setStyle(buttonElement, 'color', color);
+        
+        
       }
     });
   }

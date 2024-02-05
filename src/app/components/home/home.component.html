@@ -30,6 +30,7 @@
             <h3 class="name-product" href="#">{{product.name}} - {{product.price}}</h3>
             <div class="btn-content">
                 <button class="buy" (click)="sendCart(product)">Adicionar ao carrinho</button>
+                <button [routerLink]="['/details',product.id]">Detalhes</button>
 
             </div>
         </div>
