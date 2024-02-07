@@ -24,7 +24,18 @@ export class ProductsService {
   sendCart(product:any){
     return this.http.post<any>(`${this.url}/cart`, product)
   }
+
   
+  public menuShow():void {
+    let menuMobile = document.querySelector('.mobile-menu');
+
+    if (menuMobile?.classList.contains('open')) {
+      return menuMobile.classList.remove('open')
+    } else {
+      return menuMobile?.classList.add('open')
+    }
+  }
+
 
   // Cart component
 

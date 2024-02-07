@@ -19,12 +19,33 @@
                 </div>
 
             </ul>
+
         </nav>
+<div class="content-mobile">
+    
+    
+          
+    
+            <div class="mobile-menu-icon">
+                <button (click)="menuShow()" class="material-symbols-outlined" id="icon">menu</button>
+            </div>
+
+            <div class="mobile-menu">
+                <ul class="items">
+                    <li id="item">Home</li>
+                    <li id="item">Contato</li>
+                    <li id="item">Quem somos</li>
+                </ul>
+            </div>
+    
+</div>
+
+
     </header>
 
     <section class="products-content">
         <div class="product" *ngFor="let product of products">
-            <button class="material-symbols-outlined" id="add-fav"  (click)="sendFavorite(product)"
+            <button class="material-symbols-outlined" id="add-fav" (click)="sendFavorite(product)"
                 [attr.data-id]="product.id" #btnFavorite>favorite</button>
             <img class="img-product" [src]="product.photo" alt="">
             <h3 class="name-product" href="#">{{product.name}} - {{product.price}}</h3>

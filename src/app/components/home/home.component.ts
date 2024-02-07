@@ -142,6 +142,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     });
   }
 
+  menuShow():void{
+    this.service.menuShow()
+  }
 
 
 }
