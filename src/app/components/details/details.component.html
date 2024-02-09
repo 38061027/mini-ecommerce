@@ -1,3 +1,20 @@
-<main *ngIf="product">
-    <p >{{product.name}}</p>
+<main class="container-details" *ngIf="product">
+
+    <div class="content">
+        <div class="box-one">
+            <img class="img-details" [src]="product.photo" alt="">
+            <div class="desc">
+                <h2>{{product.name}} - {{product.brand}}</h2>
+                <h1>{{product.price}}</h1>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>{{product.description}}</p>
+        </div>
+
+
+
+    </div>
+
 </main>

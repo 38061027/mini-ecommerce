@@ -35,6 +35,16 @@
                     <li id="item">Home</li>
                     <li id="item">Contato</li>
                     <li id="item">Quem somos</li>
+                    <div class="favorite-shop">
+                        <li class="material-symbols-outlined" routerLink="favorites" id="item-favorite">favorite<p
+                                class="counter-fav">{{favoriteCounter}}</p>
+                        </li>
+                        <li routerLink="cart" class="material-symbols-outlined" id="item-shop">shopping_cart <p
+                                class="counter-shop">
+                                {{cartCounter}}</p>
+                        </li>
+    
+                    </div>
                 </ul>
             </div>
     

@@ -1,4 +1,18 @@
 <main class="container-cart">
+    
+    
+        <div class="details-cart">
+            <h2>Detalhes do carrinho</h2>
+    
+    
+            <p class="qtd-pdt">Produtos {{productsCounter}}</p>
+    
+    
+            <div class="total">
+                <h2>Total</h2>
+                <h2>{{total | currency}}</h2>
+            </div>
+        </div>
 
     <div class="content-product">
 
@@ -22,19 +36,9 @@
 
     </div>
 
+    <span routerLink="" class="material-symbols-outlined" id="back">
+        arrow_back
+        </span>
 
-
-    <div class="details-cart">
-        <h2>Detalhes do carrinho</h2>
-
-
-        <p class="qtd-pdt">Produtos {{productsCounter}}</p>
-
-
-        <div class="total">
-            <h2>Total</h2>
-            <h2>{{total | currency}}</h2>
-        </div>
-    </div>
 
 </main>

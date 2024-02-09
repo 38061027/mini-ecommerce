@@ -1,0 +1,31 @@
+.container-details {
+    border: 1px solid red;
+
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box-one {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-details {
+    width: 450px;
+    height: 450px;
+}
+
+.desc {
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
