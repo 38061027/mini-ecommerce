@@ -25,6 +25,7 @@ export class ProductsService {
     return this.http.post<any>(`${this.url}/cart`, product)
   }
 
+  // menu mobile
   
   public menuShow():void {
     let menuMobile = document.querySelector('.mobile-menu');

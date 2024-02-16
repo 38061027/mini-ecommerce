@@ -48,6 +48,7 @@ export class CartComponent implements OnInit{
     this.total = this.cart.reduce((acc, curr) => acc + (curr.price * (curr.quantity || 0)),currentTotal);
     let currentProducts = this.cart.length
     this.productsCounter = this.cart.reduce((acc, curr) => acc + (curr.quantity || 0), currentProducts);
+
   }
 
 }

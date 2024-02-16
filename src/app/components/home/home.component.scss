@@ -33,7 +33,6 @@
 
 .favorite-shop {
     width: 80px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,14 +57,17 @@
 #item-favorite {
     color: red;
     position: relative;
+    cursor: pointer;
+
 }
 
 
 
 
 #item-shop {
-    color: blue;
+    color: rgb(36, 0, 213);
     position: relative;
+    cursor: pointer;
 
 }
 
@@ -198,6 +200,9 @@ border: none;
 .mobile-menu{
     display: none;
 }
+
+
+
 
 @media screen and (max-width:700px) {
 
