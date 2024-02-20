@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ContatoComponent } from './components/contato/contato.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DetailsComponent } from './components/details/details.component';
     FooterComponent,
     CartComponent,
     FavoritesComponent,
-    DetailsComponent
+    DetailsComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
