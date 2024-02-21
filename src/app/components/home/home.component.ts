@@ -10,9 +10,6 @@ import { ProductsService } from 'src/app/services/products.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChildren('btnFavorite') btnFavorites!: QueryList<ElementRef>;
 
-
-
-
   products!: any[]
   favorites!: any[]
   cartCounter: number = 0

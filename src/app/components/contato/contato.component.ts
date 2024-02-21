@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contato',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./contato.component.scss']
 })
 export class ContatoComponent {
+
+constructor(private fb: FormBuilder){
+  
+}
 
 }
