@@ -10,6 +10,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ContatoComponent } from './components/contato/contato.component';
+import {ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContatoComponent } from './components/contato/contato.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-  HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

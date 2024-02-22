@@ -1,12 +1,17 @@
 <main class="container-form">
-    <div >
+    <div class="content">
         <h1 class="title-contact">Contato</h1>
 
-        <form class="content-form">
-            <input type="text" placeholder="Name" >
-            <input type="number" placeholder="Phone">
-            <input type="email" placeholder="Email">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+        <form class="content-form" [formGroup]="form" (ngSubmit)="submit()">
+            <input type="text" placeholder="Name" formControlName="name">
+            <input type="number" placeholder="Phone" formControlName="phone">
+            <input type="email" placeholder="Email" formControlName="email">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" formControlName="text"></textarea>
         </form>
+        <p>{{form.value| json}}</p>
+
+        <div>
+            <button class="btn-submit" [disabled]="!form.valid">Enviar</button>
+        </div>
     </div>
 </main>
